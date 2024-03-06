@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background: #f1f1f1;
+    position: fixed;
+   
+    
+    left: 0;
+    right: 0;
+
+}
+
+.logo{
+    width: 120px;
+    /* height: 120px; */
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.logo:hover{
+    transform: scale(1.5)rotate(360deg);
+}
+@media (max-width:720px){
+  .logo{
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width:490px){
+    .logo{
+        width: 60px;
+        height: 60px;
+      }  
+}
+@media (max-width:390px){
+    .logo{
+        width: 50px;
+        height: 50px;
+      }  
+}
+
