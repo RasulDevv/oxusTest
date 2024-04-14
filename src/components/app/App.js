@@ -4,13 +4,20 @@ import MainLayOut from "../../layouts/MainLayOut";
 import Home from "../../pages/Home";
 import { useEffect, useState } from "react";
 import NotFound from "../../pages/NotFound";
-import axios from "axios";
-import data from "../../data/base";
 
   const App = () => {
     const [baza, setBaza] = useState([]),
+          [data, setData] = useState([]),
           [foiz, setFoiz] = useState(0)    
-
+    useEffect(() => {
+      async function AA() {
+        await fetch("https://raw.githubusercontent.com/RasulDevv/oxusData/master/data.json")
+          .then(res => res.json())
+          .then(dat => setData(dat.data))
+          .catch(err => console.log(err))
+      }
+      AA()
+    }, [])
     return (
       <BrowserRouter>
         <Routes>
