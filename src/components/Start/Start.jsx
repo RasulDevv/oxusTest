@@ -23,11 +23,11 @@ const Start = ({ baza, setBaseIndex }) => {
       });
       const messagee = { name, email, phoneNumber, baza: arr } // telegramga yuboriladigan object
 
-      // axios.post(URi__API, {
-      //   chat_id: CHAT_id,
-      //   parse_mode: 'html',
-      //   text: messagee
-      // })
+      axios.post(URi__API, {
+        chat_id: CHAT_id,
+        parse_mode: 'html',
+        text: messagee
+      })
 
       setName('')
       setEmail('')
