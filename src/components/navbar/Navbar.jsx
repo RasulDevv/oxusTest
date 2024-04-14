@@ -5,10 +5,10 @@ const Navbar = () => {
   return (
     <div>
     <div className='nav'>
-    <a href="https://oxusuniversity.uz/">
-        <img  className='logo' src={logo} alt="" />
-
-    </a>
+      <a href="https://oxusuniversity.uz/">
+          <img  className='logo' src={logo} alt="" />
+          <span>OXUS UNIVERSITY</span>
+      </a>
    
 </div>
     </div>

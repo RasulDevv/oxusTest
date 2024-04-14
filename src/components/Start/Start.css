@@ -25,7 +25,6 @@
 }
 
 .form__text {
-    font-family: 'monserat';
     font-size: 30px;
     text-transform: uppercase;
     color: rgba(19, 58, 78, 1);
@@ -39,6 +38,11 @@
     margin-bottom: 10px;
 }
 
+.form__title p {
+    font-size: 36px;
+    font-weight: bold;
+}
+
 .label {
     display: flex;
     flex-direction: column;
@@ -47,9 +51,7 @@
 
 .label span {
     font-size: 20px;
-    font-family: 'monserat';
     color: #323232;
-    text-transform: capitalize;
 }
 
 .form__input {
@@ -97,14 +99,12 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
     color: #fff;
-    text-transform: capitalize;
     position: absolute;
     top: -65px;
     left: -90px;
     width: 800px;
 }
 @font-face {
-    font-family: 'monserat';
     src: url(../../fonts/Montserrat-Bold.ttf);
     /* font-weight: 700; */
 }

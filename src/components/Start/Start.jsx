@@ -7,30 +7,19 @@ const Start = ({ baza, setBaseIndex, name, setName, email, setEmail, phoneNumber
   const [ogox, setOgox] = useState("")
   function handleSubmit(e) {
     e.preventDefault()
-    
     if (name == "" || phoneNumber.length < 9) setOgox("ism va telefon raqam kiriting!!!")
-    else {
-      let arr = []
-      baza.forEach(element => {
-        arr.push({ [element.imgName]: element.desc })
-      });
-      const messagee = { name, email, phoneNumber, baza: arr } // telegramga yuboriladigan object
-
-      setName('')
-      setEmail('')
-      setPhoneNumber('')
-      setBaseIndex(p => p + 1)
-    }
+    else setBaseIndex(p => p + 1)
   }
+
   return <div className="">
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__title">
-      <img src={fnshloogo} className="form__text"/>
+        <p>Registration</p>
       </div>
       <div className="form__content">
     
       <label htmlFor="name" className="label">
-        <span>  ismingizni kiriting</span>
+        <span>Ismingizni kiriting</span>
         <input id="name" className="form__input" placeholder="name" type="text" value={name} onChange={e => setName(e.target.value)} />
       </label>
       <label htmlFor="email" className="label">
@@ -39,7 +28,7 @@ const Start = ({ baza, setBaseIndex, name, setName, email, setEmail, phoneNumber
         <input id="email" className="form__input" placeholder="email" type="email" value={email} onChange={e => setEmail(e.target.value)} />
       </label>
       <label htmlFor="num" className="label">
-        <span>telefon raqamingiz</span>
+        <span>Telefon raqamingiz</span>
         <input id="num" className="form__input" placeholder="phone number" type="number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
       </label>
       <button className="form__btn">send</button>

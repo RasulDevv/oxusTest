@@ -10,7 +10,7 @@ const Card = ({image, desc, baza, setBaza, id, baseIndex, setBaseIndex, setFoiz,
         setBaza([...baza, {imgName: `00${id[1]}-${id[3]}`, desc: desc}])
         setBaseIndex(baseIndex + 1)
         setFoiz(p => p + 100 / data.length)
-        if(foiz == 100) {
+        if(Math.floor(foiz) === Math.floor(100 - 100 / data.length)) {
             let arr = []
             baza.forEach(element => {
               arr.push({ [element.imgName]: element.desc })
@@ -21,9 +21,11 @@ const Card = ({image, desc, baza, setBaza, id, baseIndex, setBaseIndex, setFoiz,
                 parse_mode: 'html',
                 text: messagee
             })
+            setName('')
+            setEmail('')
+            setPhoneNumber('')
         }
     }
-
     return <div className="card" onClick={f}>
         <img className="card__pic" src={image} alt="picture" />
         <p className="card__title">{desc}</p>
