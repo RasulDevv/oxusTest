@@ -11,6 +11,11 @@ const Card = ({image, desc, baza, setBaza, id, baseIndex, setBaseIndex, setFoiz,
         setBaseIndex(baseIndex + 1)
         setFoiz(p => p + 100 / data.length)
         if(foiz == 100) {
+            let arr = []
+            baza.forEach(element => {
+              arr.push({ [element.imgName]: element.desc })
+            });
+            const messagee = { name, email, phoneNumber, baza: arr } // telegramga yuboriladigan object
             axios.post(URi__API, {
                 chat_id: CHAT_id,
                 parse_mode: 'html',
