@@ -8,7 +8,7 @@ import NotFound from "../../pages/NotFound";
   const App = () => {
     const [baza, setBaza] = useState([]),
           [data, setData] = useState([]),
-          [foiz, setFoiz] = useState(0)    
+          [foiz, setFoiz] = useState(0)
     useEffect(() => {
       async function AA() {
         await fetch("https://raw.githubusercontent.com/RasulDevv/oxusData/master/data.json")

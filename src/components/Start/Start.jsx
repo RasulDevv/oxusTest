@@ -3,15 +3,8 @@ import "./Start.css";
 import axios from "axios";
 import fnshloogo from '../../images/logo.png'
 
-const TOKEN = "7144071754:AAF3G9NG5j3MQuXNRNQdAGggfU-xEj12_IE",
-  CHAT_id = -1002145202503,
-  URi__API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-
-const Start = ({ baza, setBaseIndex }) => {
-  const [name, setName] = useState(""),
-    [email, setEmail] = useState(""),
-    [phoneNumber, setPhoneNumber] = useState(""),
-    [ogox, setOgox] = useState("")
+const Start = ({ baza, setBaseIndex, name, setName, email, setEmail, phoneNumber, setPhoneNumber }) => {
+  const [ogox, setOgox] = useState("")
   function handleSubmit(e) {
     e.preventDefault()
     
@@ -22,12 +15,6 @@ const Start = ({ baza, setBaseIndex }) => {
         arr.push({ [element.imgName]: element.desc })
       });
       const messagee = { name, email, phoneNumber, baza: arr } // telegramga yuboriladigan object
-
-      axios.post(URi__API, {
-        chat_id: CHAT_id,
-        parse_mode: 'html',
-        text: messagee
-      })
 
       setName('')
       setEmail('')
