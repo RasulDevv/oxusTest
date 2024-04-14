@@ -1,8 +1,15 @@
 .finish {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+
+.text {
+    color: #fff;
+    font-size: 48px;
 }
 
 .btn {
@@ -14,4 +21,10 @@
     line-height: 150%;
     border: none;
     cursor: pointer;
+}
+
+@media (max-width:490px) {
+    .text {
+        font-size: 24px;
+    }
 }

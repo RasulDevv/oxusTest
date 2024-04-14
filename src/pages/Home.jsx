@@ -10,7 +10,7 @@ const Home = ({setBaza,baza,data,loading,setFoiz,foiz}) => {
         [phoneNumber, setPhoneNumber] = useState("")
   return (
     <>
-        {baseIndex > -1 ? <p className="tanlash">Quyidagi rasmlardan birini tanlang</p> : ""}
+        {baseIndex > -1 && baseIndex < data.length ? <p className="tanlash">Quyidagi rasmlardan birini tanlang</p> : ""}
         {baseIndex == -1 ? (
           <Start baza={baza} setBaseIndex={setBaseIndex} name={name} setName={setName} email={email} setEmail={setEmail} phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} />
         ) : !loading ? data[baseIndex] ? (

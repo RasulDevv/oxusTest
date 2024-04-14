@@ -16,6 +16,15 @@ body {
     text-align: center;
 }
 
+.oxiri {
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+}
+
 @media (max-width:490px) {
     .tanlash {
         top: 100px;
